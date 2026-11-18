@@ -1,0 +1,18 @@
+EVA 3 | VALIDACIÓN SLA | SEPTIEMBRE 2026
+Datos: anexos docentes, no mediciones independientes
+----------------------------------------------------------------------
+Caída física: 475 min | Excluida: 315 min | Atribuible: 160 min
+Presupuesto de caída: 43.20 min | Exceso: 116.80 min
+MÉTRICA          MEDIDO                 VEREDICTO
+disponibilidad   99.62963 %             NO CUMPLE
+latencia         27.40000 ms            CUMPLE
+jitter           9.91945 ms             CUMPLE CON SALVEDAD
+perdida          no determinable        EVIDENCIA INSUFICIENTE
+throughput       180.75000 Mbps         CUMPLE
+respuesta        66.00000 min           NO CUMPLE
+mttr             75.00000 min           CUMPLE
+----------------------------------------------------------------------
+GLOBAL: NO CUMPLE
+CRÉDITO: 15.00% = $180,000 CLP netos
+ADVERTENCIA: jitter condicionado; pérdida insuficiente (60% de días).
+PROYECCIÓN SERIE: 99.730151% | ACCESO CON RADIO: 99.929012%

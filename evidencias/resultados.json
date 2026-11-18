@@ -1,0 +1,167 @@
+{
+  "periodo": "2026-09",
+  "caso": "EVA 3 Agrícola Valle de Elqui - datos de enunciado",
+  "eventos": [
+    {
+      "evento": "E1",
+      "minutos": 210,
+      "atribuible": false,
+      "fundamento": "Mantención 210 min; aviso 112 h (>=72 h); <=240 min/mes",
+      "clausula": "6.1a,6.2"
+    },
+    {
+      "evento": "E2",
+      "minutos": 55,
+      "atribuible": true,
+      "fundamento": "Corte de fibra por obras, sin fuerza mayor formal acreditada",
+      "clausula": "3.1,6.1b"
+    },
+    {
+      "evento": "E3",
+      "minutos": 105,
+      "atribuible": false,
+      "fundamento": "CPE sin energía y sin UPS, responsabilidad cliente",
+      "clausula": "6.1c,7.2"
+    },
+    {
+      "evento": "E4",
+      "minutos": 75,
+      "atribuible": true,
+      "fundamento": "Falla de tarjeta PE La Serena",
+      "clausula": "3.1"
+    },
+    {
+      "evento": "E5",
+      "minutos": 30,
+      "atribuible": true,
+      "fundamento": "Mantención de emergencia avisada solo 14 h 30 min antes (<72 h)",
+      "clausula": "6.1a"
+    }
+  ],
+  "tickets": [
+    {
+      "ticket": "INC-2611",
+      "evento": "E2",
+      "respuesta_min": 23,
+      "restauracion_desde_ticket_min": 49,
+      "cumple": true
+    },
+    {
+      "ticket": "INC-2648",
+      "evento": "E3",
+      "respuesta_min": 33,
+      "restauracion_desde_ticket_min": 98,
+      "cumple": true
+    },
+    {
+      "ticket": "INC-2672",
+      "evento": "E4",
+      "respuesta_min": 66,
+      "restauracion_desde_ticket_min": 71,
+      "cumple": false
+    },
+    {
+      "ticket": "INC-2690",
+      "evento": "E5",
+      "respuesta_min": 7,
+      "restauracion_desde_ticket_min": 27,
+      "cumple": true
+    }
+  ],
+  "restauraciones_atribuibles": [
+    {
+      "ticket": "INC-2611",
+      "restauracion_desde_nms_min": 55,
+      "restauracion_desde_ticket_min": 49
+    },
+    {
+      "ticket": "INC-2672",
+      "restauracion_desde_nms_min": 75,
+      "restauracion_desde_ticket_min": 71
+    },
+    {
+      "ticket": "INC-2690",
+      "restauracion_desde_nms_min": 30,
+      "restauracion_desde_ticket_min": 27
+    }
+  ],
+  "minutos_mes": 43200.0,
+  "minutos_caida_fisica": 475.0,
+  "minutos_excluidos": 315.0,
+  "minutos_caida_atribuible": 160.0,
+  "minutos_permitidos": 43.2,
+  "minutos_exceso": 116.8,
+  "resultados": {
+    "disponibilidad": {
+      "objetivo": 99.9,
+      "medido": 99.62962962962963,
+      "unidad": "%",
+      "veredicto": "NO CUMPLE"
+    },
+    "latencia": {
+      "objetivo": 30.0,
+      "medido": 27.4,
+      "unidad": "ms",
+      "cobertura": 0.9890046296296297,
+      "veredicto": "CUMPLE"
+    },
+    "jitter": {
+      "objetivo": 10.0,
+      "medido": 9.919449970743125,
+      "unidad": "ms",
+      "muestras": 42725,
+      "cobertura_condicional_60s": 0.9890046296296297,
+      "veredicto": "CUMPLE CON SALVEDAD"
+    },
+    "perdida": {
+      "objetivo": 0.5,
+      "medido": null,
+      "unidad": "%",
+      "medicion_parcial": 0.31,
+      "cobertura": 0.6,
+      "veredicto": "EVIDENCIA INSUFICIENTE"
+    },
+    "throughput": {
+      "objetivo": 180.0,
+      "medido": 180.75,
+      "unidad": "Mbps",
+      "pruebas": 4,
+      "veredicto": "CUMPLE"
+    },
+    "respuesta": {
+      "objetivo": 60.0,
+      "medido": 66.0,
+      "unidad": "min",
+      "tickets": 4,
+      "veredicto": "NO CUMPLE"
+    },
+    "mttr": {
+      "objetivo": 240.0,
+      "medido": 75.0,
+      "unidad": "min",
+      "tickets_atribuibles": 3,
+      "veredicto": "CUMPLE"
+    }
+  },
+  "credito_disponibilidad": 0.1,
+  "credito_adicional_metricas": [
+    "respuesta"
+  ],
+  "credito_total_fraccion": 0.15,
+  "credito_clp_neto": 180000.0,
+  "global": "NO CUMPLE",
+  "modelo_redundancia": {
+    "serie": 0.99730150977501,
+    "acceso_fibra_radio": 0.99999,
+    "total_con_respaldo": 0.9992901169939,
+    "caida_serie_minutos_equivalentes": 116.574777719568,
+    "caida_respaldo_minutos_equivalentes": 30.66694586351784,
+    "supuesto": "Independencia de fallas; CPE, PE y backbone comunes. Valores anuales usados como aproximación, no garantía mensual."
+  },
+  "limitaciones": [
+    "Pérdida: solo 18 de 30 días; no extrapolar 0,31%.",
+    "Jitter: comprobar que el colector fue independiente del que falló el 19-sep y validar cadencia/cobertura temporal.",
+    "La demarcación no demuestra por sí misma throughput simétrico en ambas direcciones.",
+    "El extracto contractual no define inicio de MTTR; se evalúa conservadoramente desde caída NMS."
+  ]
+}

@@ -1,0 +1,6 @@
+id,fecha,inicio,fin,clasificacion,justificacion,referencia
+E1,2026-09-03,02:00,05:30,excluido,"Mantención 210 min; aviso 112 h (>=72 h); <=240 min/mes","6.1a,6.2"
+E2,2026-09-09,14:12,15:07,atribuible,"Corte de fibra por obras, sin fuerza mayor formal acreditada","3.1,6.1b"
+E3,2026-09-15,10:40,12:25,excluido,"CPE sin energía y sin UPS, responsabilidad cliente","6.1c,7.2"
+E4,2026-09-21,22:05,23:20,atribuible,"Falla de tarjeta PE La Serena","3.1"
+E5,2026-09-27,08:30,09:00,atribuible,"Mantención de emergencia avisada solo 14 h 30 min antes (<72 h)","6.1a"

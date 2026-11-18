@@ -1,0 +1,23 @@
+# Contrato de caso docente, EVA 3, página 2. No corresponde a medición real.
+servicio: "Internet dedicado simétrico de 200 Mbps"
+cliente: "Agrícola Valle de Elqui SpA"
+proveedor: "NorteNet Telecomunicaciones"
+periodo: "2026-09"
+demarcacion: "Puerto LAN del CPE, planta Vicuña"
+minutos_mes: 43200
+minimo_cobertura: 0.90
+cargo_mensual_neto_clp: 1200000
+credito_maximo: 0.50
+credito_otros: 0.05
+objetivos:
+  disponibilidad: {operador: ">=", valor: 99.9, unidad: "%", estadistico: "mes calendario"}
+  latencia: {operador: "<=", valor: 30, unidad: "ms", estadistico: "RTT promedio mensual"}
+  jitter: {operador: "<=", valor: 10, unidad: "ms", estadistico: "promedio ponderado por muestras"}
+  perdida: {operador: "<=", valor: 0.5, unidad: "%", estadistico: "porcentaje mensual"}
+  throughput: {operador: ">=", valor: 180, unidad: "Mbps", estadistico: "media de >=4 pruebas válidas", minimo_pruebas: 4}
+  respuesta: {operador: "<=", valor: 60, unidad: "min", estadistico: "cada ticket"}
+  mttr: {operador: "<=", valor: 240, unidad: "min", estadistico: "cada incidente atribuible"}
+tramos_disponibilidad:
+  - {minimo: 99.5, maximo_exclusivo: 99.9, credito: 0.10}
+  - {minimo: 99.0, maximo_exclusivo: 99.5, credito: 0.25}
+  - {minimo: 0.0, maximo_exclusivo: 99.0, credito: 0.50}

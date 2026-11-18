@@ -1,0 +1,16 @@
+test_credito_15 (test_calc_sla.TestEVA3.test_credito_15) ... ok
+test_credito_si_todos_responden_en_60 (test_calc_sla.TestEVA3.test_credito_si_todos_responden_en_60) ... ok
+test_disponibilidad_y_exceso (test_calc_sla.TestEVA3.test_disponibilidad_y_exceso) ... ok
+test_jitter_ponderado_no_simple (test_calc_sla.TestEVA3.test_jitter_ponderado_no_simple) ... ok
+test_latencia_y_cobertura (test_calc_sla.TestEVA3.test_latencia_y_cobertura) ... ok
+test_minutos_por_evento (test_calc_sla.TestEVA3.test_minutos_por_evento) ... ok
+test_modelo_radio_no_confundir_con_sistema_completo (test_calc_sla.TestEVA3.test_modelo_radio_no_confundir_con_sistema_completo) ... ok
+test_perdida_no_extrapolada (test_calc_sla.TestEVA3.test_perdida_no_extrapolada) ... ok
+test_regla_menos_de_cuatro_pruebas (test_calc_sla.TestEVA3.test_regla_menos_de_cuatro_pruebas) ... ok
+test_respuesta_66_vs_mttr_75 (test_calc_sla.TestEVA3.test_respuesta_66_vs_mttr_75) ... ok
+test_speedtest_no_incluido (test_calc_sla.TestEVA3.test_speedtest_no_incluido) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.025s
+
+OK
